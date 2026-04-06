@@ -81,10 +81,6 @@ L = MSE(x_hat, x)
   + KL[q(z1) || N(0, I)]
   + KL[q(z2) || N(0, I)]
   + lambda_reg * ||z1_mu||^2   (applied only to noiseless samples)
-```
-
-`lambda_reg` is 1 for LTI and 5 for Minthreat. The LTI Split-VAE applies reconstruction loss to all samples; the Minthreat version applies it to noisy samples only.
-
 ---
 
 ### Z-VAE (Physics-Informed VAE)
