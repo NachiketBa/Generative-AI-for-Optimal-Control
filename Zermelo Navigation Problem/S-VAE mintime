@@ -111,8 +111,6 @@ def generate_samples(vae, num_samples):
             z_sample = torch.randn(1, latent_size).to(device)
             generated_sample = vae.decoder(z_sample).detach().cpu().numpy()
             generated_samples.append(generated_sample)
-
-    # Convert to array and save to CSV
     generated_samples = np.vstack(generated_samples)
     output_path = "C:/Users/nubapat/OneDrive - Worcester Polytechnic Institute (wpi.edu)/2024-JNL-NUBapat/Archives/Scatter-Plots/SVAE_test_500.csv"
     np.savetxt(output_path, generated_samples, delimiter=",")
